@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navbarlist = document.getElementById("navbarlist");
+
+  if (hamburger && navbarlist) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navbarlist.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".navbarlist li a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navbarlist.classList.remove("active");
+      });
+    });
+  }
+
   const commentsGrid = document.getElementById("recent-comments");
   const commentForm = document.getElementById("comment-form");
 
