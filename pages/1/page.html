@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Web Build | WebBasics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo"><a href="../index.html">WebBasics.</a></div>
+    <ul class="navbarlist">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <header class="blog-header">
+    <div class="header-content">
+      <span class="category-badge">Web Fundamentals</span>
+      <h1 class="blog-title">Introduction to Web Build</h1>
+      <p class="blog-subtitle">Understanding the core languages, frameworks, and your first project setup</p>
+      
+      <div class="blog-meta">
+        <div class="author-avatar">WT</div>
+        <div class="author-info">
+          <span class="author-name">WebBasics Team</span>
+          <span class="post-date">Mar 22, 2025 • <span id="reading-time">5 min read</span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="blog-container">
+    <article class="blog-content">
+      <p class="lead-excerpt">New to web development? Learn the distinct roles of HTML, CSS, and JavaScript, how frameworks differ from languages, and get comfortable with the Atom editor as you build your first project.</p>
+
+      <h2>The Three Pillars of the Web</h2>
+      <p>Every website you visit is built on three fundamental technologies: HTML, CSS, and JavaScript. They work together to create structure, style, and interactivity. Think of them as the skeleton, skin, and muscles of a webpage.</p>
+      <ul>
+        <li><strong>HTML (HyperText Markup Language)</strong> – Provides the raw structure and content. It defines headings, paragraphs, images, links, and other elements that give meaning to the information.</li>
+        <li><strong>CSS (Cascading Style Sheets)</strong> – Handles presentation: colors, fonts, spacing, layout, and responsive design. It makes the page visually appealing and adaptable to different screen sizes.</li>
+        <li><strong>JavaScript</strong> – Adds behavior and interactivity. It can update content dynamically, respond to user actions, fetch data from servers, and create engaging experiences.</li>
+      </ul>
+      <p>Together, these three languages form the foundation of front‑end web development. Understanding how they interact is essential before moving on to more advanced tools.</p>
+
+      <h2>Languages vs. Frameworks: What’s the Difference?</h2>
+      <p>As you start learning, you’ll hear about frameworks like React, Vue, Angular, or Bootstrap. It’s important to know the distinction between a <em>language</em> and a <em>framework</em>.</p>
+      <ul>
+        <li><strong>Languages</strong> (HTML, CSS, JavaScript) are the core building blocks. They are standards defined by specifications, and browsers implement them directly. You can write a website using only these languages.</li>
+        <li><strong>Frameworks</strong> are pre‑written libraries or tools built on top of languages to speed up development. For example, Bootstrap provides ready‑made CSS classes and components, while React helps you build complex user interfaces with JavaScript. Frameworks are optional but often used in professional projects.</li>
+      </ul>
+      <p>Think of languages as the ingredients and frameworks as recipes. You can cook without recipes, but they help you create consistent, scalable results faster. However, mastering the languages first gives you the flexibility to understand and debug any framework.</p>
+
+      <h2>Setting Up Your First Project with Atom</h2>
+      <p>To write HTML, CSS, and JavaScript, you need a text editor. Atom is a free, open‑source editor that’s beginner‑friendly yet powerful. Here’s how to set up a basic website project:</p>
+      <ol>
+        <li><strong>Install Atom</strong> – Download from atom.io and install it on your computer.</li>
+        <li><strong>Create a project folder</strong> – On your desktop or documents, create a new folder called <code>my-first-website</code>.</li>
+        <li><strong>Open the folder in Atom</strong> – Launch Atom, then go to <em>File → Add Project Folder</em> and select your new folder. This becomes your project root.</li>
+        <li><strong>Create your first HTML file</strong> – Inside the folder, right‑click in the sidebar and choose <em>New File</em>. Name it <code>index.html</code>. This file will be the homepage.</li>
+        <li><strong>Add a CSS file</strong> – Create another file called <code>style.css</code>. Link it in your HTML with <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> inside the <code>&lt;head&gt;</code>.</li>
+        <li><strong>Add a JavaScript file</strong> – Create <code>script.js</code>. Link it just before the closing <code>&lt;/body&gt;</code> tag using <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>.</li>
+      </ol>
+      <p>Your project structure should look like this:</p>
+      
+      <div class="code-wrapper" data-language="plaintext">
+<pre><code>my-first-website/
+├── index.html
+├── style.css
+└── script.js</code></pre>
+      </div>
+      
+      <p>Atom provides syntax highlighting, autocompletion, and a built‑in package manager to extend functionality. You can preview your site by opening <code>index.html</code> in any web browser.</p>
+
+      <h2>Writing Your First Lines of Code</h2>
+      <p>Now that your environment is ready, let’s write a simple webpage that demonstrates all three languages.</p>
+      
+      <p><strong>index.html</strong> – The structure:</p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, Web!&lt;/h1&gt;
+    &lt;p id="message"&gt;This is a paragraph.&lt;/p&gt;
+    &lt;button id="clickBtn"&gt;Click Me&lt;/button&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+
+      <p><strong>style.css</strong> – Add some style:</p>
+      <div class="code-wrapper" data-language="css">
+<pre><code>body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}</code></pre>
+      </div>
+
+      <p><strong>script.js</strong> – Add interactivity:</p>
+      <div class="code-wrapper" data-language="javascript">
+<pre><code>const button = document.getElementById('clickBtn');
+const message = document.getElementById('message');
+
+button.addEventListener('click', () => {
+  message.textContent = 'You clicked the button! 🎉';
+  message.style.color = 'blue';
+});</code></pre>
+      </div>
+      
+      <p>Save all files, then open <code>index.html</code> in your browser. You’ll see a styled page with a button that updates the paragraph when clicked. This simple example shows how HTML, CSS, and JavaScript work together.</p>
+
+      <h2>Next Steps</h2>
+      <p>Congratulations! You’ve built your first interactive webpage. From here, you can expand by learning:</p>
+      <ul>
+        <li>More HTML tags (forms, tables, media)</li>
+        <li>CSS layout techniques (Flexbox, Grid)</li>
+        <li>JavaScript fundamentals (variables, functions, DOM manipulation)</li>
+        <li>How to use a framework like Bootstrap or React after mastering the basics</li>
+      </ul>
+      <p>Remember, every expert was once a beginner. Keep experimenting, break things, and rebuild them. That’s how you grow as a developer.</p>
+    </article>
+
+    <div class="blog-footer">
+      <div class="article-navigation">
+        <a href="../../index.html#articles" class="nav-btn prev-btn disabled">← Previous</a>
+        <a href="../../index.html" class="nav-btn home-btn">Home</a>
+        <a href="../2/page2.html" class="nav-btn next-btn">Next →</a>
+      </div>
+      <p>Enjoyed this article? Share it with a fellow dev!</p>
+      <div class="share-buttons">
+        <button class="btn btn-secondary">Twitter</button>
+        <button class="btn btn-secondary">LinkedIn</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

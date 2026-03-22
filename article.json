@@ -1,0 +1,118 @@
+[
+{
+  "id": 1,
+  "title": "Introduction to Web Build",
+  "subtitle": "Understanding the core languages, frameworks, and your first project setup",
+  "category": "Web Fundamentals",
+  "date": "2025-03-22",
+  "author": "WebBasics Team",
+  "featuredImage": "assets/web-build-intro.svg",
+  "excerpt": "New to web development? Learn the distinct roles of HTML, CSS, and JavaScript, how frameworks differ from languages, and get comfortable with the Atom editor as you build your first project.",
+  "sections": [
+    {
+      "heading": "The Three Pillars of the Web",
+      "content": "<p>Every website you visit is built on three fundamental technologies: HTML, CSS, and JavaScript. They work together to create structure, style, and interactivity. Think of them as the skeleton, skin, and muscles of a webpage.</p><ul><li><strong>HTML (HyperText Markup Language)</strong> – Provides the raw structure and content. It defines headings, paragraphs, images, links, and other elements that give meaning to the information.</li><li><strong>CSS (Cascading Style Sheets)</strong> – Handles presentation: colors, fonts, spacing, layout, and responsive design. It makes the page visually appealing and adaptable to different screen sizes.</li><li><strong>JavaScript</strong> – Adds behavior and interactivity. It can update content dynamically, respond to user actions, fetch data from servers, and create engaging experiences.</li></ul><p>Together, these three languages form the foundation of front‑end web development. Understanding how they interact is essential before moving on to more advanced tools.</p>"
+    },
+    {
+      "heading": "Languages vs. Frameworks: What’s the Difference?",
+      "content": "<p>As you start learning, you’ll hear about frameworks like React, Vue, Angular, or Bootstrap. It’s important to know the distinction between a <em>language</em> and a <em>framework</em>.</p><ul><li><strong>Languages</strong> (HTML, CSS, JavaScript) are the core building blocks. They are standards defined by specifications, and browsers implement them directly. You can write a website using only these languages.</li><li><strong>Frameworks</strong> are pre‑written libraries or tools built on top of languages to speed up development. For example, Bootstrap provides ready‑made CSS classes and components, while React helps you build complex user interfaces with JavaScript. Frameworks are optional but often used in professional projects.</li></ul><p>Think of languages as the ingredients and frameworks as recipes. You can cook without recipes, but they help you create consistent, scalable results faster. However, mastering the languages first gives you the flexibility to understand and debug any framework.</p>"
+    },
+    {
+      "heading": "Setting Up Your First Project with Atom",
+      "content": "<p>To write HTML, CSS, and JavaScript, you need a text editor. Atom is a free, open‑source editor that’s beginner‑friendly yet powerful. Here’s how to set up a basic website project:</p><ol><li><strong>Install Atom</strong> – Download from atom.io and install it on your computer.</li><li><strong>Create a project folder</strong> – On your desktop or documents, create a new folder called <code>my-first-website</code>.</li><li><strong>Open the folder in Atom</strong> – Launch Atom, then go to <em>File → Add Project Folder</em> and select your new folder. This becomes your project root.</li><li><strong>Create your first HTML file</strong> – Inside the folder, right‑click in the sidebar and choose <em>New File</em>. Name it <code>index.html</code>. This file will be the homepage.</li><li><strong>Add a CSS file</strong> – Create another file called <code>style.css</code>. Link it in your HTML with <code>&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;</code> inside the <code>&lt;head&gt;</code>.</li><li><strong>Add a JavaScript file</strong> – Create <code>script.js</code>. Link it just before the closing <code>&lt;/body&gt;</code> tag using <code>&lt;script src=\"script.js\"&gt;&lt;/script&gt;</code>.</li></ol><p>Your project structure should look like this:</p><pre><code>my-first-website/\n├── index.html\n├── style.css\n└── script.js</code></pre><p>Atom provides syntax highlighting, autocompletion, and a built‑in package manager to extend functionality. You can preview your site by opening <code>index.html</code> in any web browser.</p>"
+    },
+    {
+      "heading": "Writing Your First Lines of Code",
+      "content": "<p>Now that your environment is ready, let’s write a simple webpage that demonstrates all three languages.</p><p><strong>index.html</strong> – The structure:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;My First Website&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;h1&gt;Hello, Web!&lt;/h1&gt;\n    &lt;p id=\"message\"&gt;This is a paragraph.&lt;/p&gt;\n    &lt;button id=\"clickBtn\"&gt;Click Me&lt;/button&gt;\n    &lt;script src=\"script.js\"&gt;&lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;</code></pre><p><strong>style.css</strong> – Add some style:</p><pre><code>body {\n  font-family: Arial, sans-serif;\n  text-align: center;\n  margin-top: 50px;\n  background-color: #f4f4f4;\n}\n\nh1 {\n  color: #333;\n}\n\nbutton {\n  padding: 10px 20px;\n  font-size: 16px;\n  cursor: pointer;\n}</code></pre><p><strong>script.js</strong> – Add interactivity:</p><pre><code>const button = document.getElementById('clickBtn');\nconst message = document.getElementById('message');\n\nbutton.addEventListener('click', () => {\n  message.textContent = 'You clicked the button! 🎉';\n  message.style.color = 'blue';\n});</code></pre><p>Save all files, then open <code>index.html</code> in your browser. You’ll see a styled page with a button that updates the paragraph when clicked. This simple example shows how HTML, CSS, and JavaScript work together.</p>"
+    },
+    {
+      "heading": "Next Steps",
+      "content": "<p>Congratulations! You’ve built your first interactive webpage. From here, you can expand by learning:</p><ul><li>More HTML tags (forms, tables, media)</li><li>CSS layout techniques (Flexbox, Grid)</li><li>JavaScript fundamentals (variables, functions, DOM manipulation)</li><li>How to use a framework like Bootstrap or React after mastering the basics</li></ul><p>Remember, every expert was once a beginner. Keep experimenting, break things, and rebuild them. That’s how you grow as a developer.</p>"
+    }
+  ]
+},
+{
+  "id": 2,
+  "title": "Html Fundamentals",
+  "subtitle": "Understanding the structure, syntax, and essential elements of HTML",
+  "category": "HTML Basics",
+  "date": "2025-03-22",
+  "author": "WebBasics Team",
+  "featuredImage": "assets/html-fundamentals.svg",
+  "excerpt": "HTML is the foundation of every webpage. Learn about tags, attributes, document structure, and the most commonly used elements to start building your own sites.",
+  "sections": [
+    {
+      "heading": "What is HTML?",
+      "content": "<p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a webpage using a system of elements represented by tags. Browsers interpret HTML to render content like headings, paragraphs, links, images, and more.</p><p>HTML is not a programming language; it’s a markup language that gives meaning and structure to content. Every website you visit relies on HTML at its core.</p>"
+    },
+    {
+      "heading": "HTML Document Structure",
+      "content": "<p>An HTML document has a specific skeleton that every browser expects. Here’s the minimal structure:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n  &lt;head&gt;\n    &lt;meta charset=\"UTF-8\"&gt;\n    &lt;title&gt;Page Title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;!-- Content goes here --&gt;\n  &lt;/body&gt;\n&lt;/html&gt;</code></pre><ul><li><code>&lt;!DOCTYPE html&gt;</code> – Declares the document type and HTML version.</li><li><code>&lt;html&gt;</code> – The root element that wraps all content.</li><li><code>&lt;head&gt;</code> – Contains meta information, title, links to CSS, and scripts.</li><li><code>&lt;body&gt;</code> – Holds the visible content of the webpage.</li></ul>"
+    },
+    {
+      "heading": "Tags, Elements, and Attributes",
+      "content": "<p><strong>Tags</strong> are the building blocks. Most come in pairs: an opening tag <code>&lt;tagname&gt;</code> and a closing tag <code>&lt;/tagname&gt;</code>. The content between them, plus the tags themselves, form an <strong>element</strong>.</p><p><strong>Attributes</strong> provide additional information about an element. They appear inside the opening tag:</p><pre><code>&lt;a href=\"https://example.com\"&gt;Click here&lt;/a&gt;</code></pre><p>Here <code>href</code> is an attribute that specifies the link destination.</p><p>Common global attributes include <code>id</code>, <code>class</code>, and <code>style</code>.</p>"
+    },
+    {
+      "heading": "Essential HTML Elements",
+      "content": "<p>Here are some fundamental elements you’ll use constantly:</p><ul><li><strong>Headings</strong> – <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for section titles, with <code>&lt;h1&gt;</code> being the most important.</li><li><strong>Paragraphs</strong> – <code>&lt;p&gt;</code> for blocks of text.</li><li><strong>Links</strong> – <code>&lt;a&gt;</code> with <code>href</code> to create hyperlinks.</li><li><strong>Images</strong> – <code>&lt;img&gt;</code> with <code>src</code> and <code>alt</code> attributes.</li><li><strong>Lists</strong> – <code>&lt;ul&gt;</code> (unordered), <code>&lt;ol&gt;</code> (ordered), and <code>&lt;li&gt;</code> for list items.</li><li><strong>Divisions and Spans</strong> – <code>&lt;div&gt;</code> (block container) and <code>&lt;span&gt;</code> (inline container) for grouping content.</li></ul><p>Example of a simple page using these elements:</p><pre><code>&lt;h1&gt;My First Page&lt;/h1&gt;\n&lt;p&gt;Welcome to my website.&lt;/p&gt;\n&lt;a href=\"about.html\"&gt;Learn more about me&lt;/a&gt;\n&lt;img src=\"photo.jpg\" alt=\"My photo\"&gt;\n&lt;ul&gt;\n  &lt;li&gt;First item&lt;/li&gt;\n  &lt;li&gt;Second item&lt;/li&gt;\n&lt;/ul&gt;</code></pre>"
+    },
+    {
+      "heading": "Nesting and Hierarchy",
+      "content": "<p>HTML elements can be nested inside each other to create complex structures. Proper nesting is crucial for both styling and accessibility.</p><pre><code>&lt;div&gt;\n  &lt;h2&gt;About Us&lt;/h2&gt;\n  &lt;p&gt;We are a team of &lt;strong&gt;web developers&lt;/strong&gt;.&lt;/p&gt;\n&lt;/div&gt;</code></pre><p>Always close tags in the reverse order they were opened. This creates a tree‑like structure known as the Document Object Model (DOM).</p>"
+    },
+    {
+      "heading": "Comments",
+      "content": "<p>Comments help you document your code. They are not displayed in the browser:</p><pre><code>&lt;!-- This is a comment --&gt;</code></pre><p>Use comments to explain sections, leave notes, or temporarily disable code.</p>"
+    },
+    {
+      "heading": "Next Steps",
+      "content": "<p>Now that you know the basics of HTML syntax and essential elements, you’re ready to style your content with CSS. But before moving on, practice by building a simple webpage that includes headings, paragraphs, links, images, and lists. Experiment with nesting and attributes.</p><p>In the next article, we’ll explore <strong>Semantic HTML</strong> – how to choose the right elements to make your content more meaningful and accessible.</p>"
+    }
+  ]
+},
+{
+  "id": 4,
+  "title": "Semantic HTML",
+  "subtitle": "Writing meaningful markup for better structure, accessibility, and SEO",
+  "category": "HTML Basics",
+  "date": "2025-03-22",
+  "author": "WebBasics Team",
+  "featuredImage": "assets/semantic-html.svg",
+  "excerpt": "Not all HTML elements are equal. Learn how semantic elements give meaning to your content, improve accessibility, and make your code easier to maintain.",
+  "sections": [
+    {
+      "heading": "What is Semantic HTML?",
+      "content": "<p>Semantic HTML means using HTML elements that carry meaning about the content they contain, rather than just defining how it looks. For example, <code>&lt;header&gt;</code> clearly indicates a page header, whereas a generic <code>&lt;div&gt;</code> does not convey any purpose.</p><p>Semantic elements were introduced to give developers a way to structure web pages in a way that is both human‑readable and machine‑readable. They make the document outline clear, improve accessibility for screen readers, and help search engines understand your content better.</p>"
+    },
+    {
+      "heading": "Why Use Semantic Elements?",
+      "content": "<ul><li><strong>Accessibility</strong> – Assistive technologies like screen readers use semantic elements to navigate and interpret content. Users can jump between sections, landmarks, and headings.</li><li><strong>SEO</strong> – Search engines give more weight to content inside semantic tags. Proper structure helps search bots understand the hierarchy and importance of your content.</li><li><strong>Maintainability</strong> – Code becomes self‑documenting. Other developers (or your future self) can easily understand the structure without deciphering countless <code>&lt;div&gt;</code>s.</li><li><strong>Future‑proofing</strong> – Browsers and devices will continue to improve support for semantic elements, ensuring your site remains compatible.</li></ul>"
+    },
+    {
+      "heading": "Common Semantic Elements",
+      "content": "<p>Here are the most important semantic elements and their typical uses:</p><ul><li><code>&lt;header&gt;</code> – Represents introductory content, often containing navigation links, logos, or headings. Can be used page‑wide or within sections.</li><li><code>&lt;nav&gt;</code> – Defines a set of navigation links (menus, table of contents).</li><li><code>&lt;main&gt;</code> – Specifies the primary content of the page. There should be only one <code>&lt;main&gt;</code> per document.</li><li><code>&lt;article&gt;</code> – Represents a self‑contained composition, like a blog post, news story, or comment.</li><li><code>&lt;section&gt;</code> – Groups related content, usually with a heading. Use when the content is thematically distinct.</li><li><code>&lt;aside&gt;</code> – Contains content tangentially related to the main content (sidebars, pull quotes, advertisements).</li><li><code>&lt;footer&gt;</code> – Holds footer information like copyright, contact details, or related links.</li><li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> – Wrap images, diagrams, or code snippets with an optional caption.</li><li><code>&lt;time&gt;</code> – Marks up dates and times in a machine‑readable format.</li></ul>"
+    },
+    {
+      "heading": "Semantic vs. Non‑Semantic Example",
+      "content": "<p>Compare these two approaches for a blog post layout:</p><p><strong>Non‑semantic (old way):</strong></p><pre><code>&lt;div class=\"header\"&gt;\n  &lt;h1&gt;My Blog&lt;/h1&gt;\n  &lt;div class=\"nav\"&gt;...&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"main\"&gt;\n  &lt;div class=\"post\"&gt;\n    &lt;h2&gt;Article Title&lt;/h2&gt;\n    &lt;div class=\"content\"&gt;...&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"footer\"&gt;...&lt;/div&gt;</code></pre><p><strong>Semantic (modern):</strong></p><pre><code>&lt;header&gt;\n  &lt;h1&gt;My Blog&lt;/h1&gt;\n  &lt;nav&gt;...&lt;/nav&gt;\n&lt;/header&gt;\n&lt;main&gt;\n  &lt;article&gt;\n    &lt;h2&gt;Article Title&lt;/h2&gt;\n    &lt;p&gt;...&lt;/p&gt;\n  &lt;/article&gt;\n&lt;/main&gt;\n&lt;footer&gt;...&lt;/footer&gt;</code></pre><p>The semantic version immediately communicates the role of each block, making it easier to read and style.</p>"
+    },
+    {
+      "heading": "How Browsers Handle Semantic Elements",
+      "content": "<p>All modern browsers support semantic elements. However, older browsers (like Internet Explorer 8 and below) do not recognize them and may treat them as inline elements. To ensure compatibility, you can use a simple CSS reset:</p><pre><code>header, nav, main, article, section, aside, footer {\n  display: block;\n}</code></pre><p>For even older browsers, you can include the HTML5 Shiv script, but for most projects today, the CSS reset is sufficient.</p>"
+    },
+    {
+      "heading": "Accessibility and ARIA",
+      "content": "<p>Even with semantic HTML, you can enhance accessibility with ARIA (Accessible Rich Internet Applications) attributes. However, the first rule of ARIA is: <strong>“Don’t use ARIA if you can use a native semantic element.”</strong> For example, a <code>&lt;button&gt;</code> is natively accessible; a <code>&lt;div&gt;</code> with <code>role=\"button\"</code> requires extra work.</p><p>Use semantic elements to avoid needing ARIA for basic structure. Reserve ARIA for complex widgets or when you need to convey dynamic changes.</p>"
+    },
+    {
+      "heading": "Putting It All Together",
+      "content": "<p>Let’s build a simple semantic webpage skeleton:</p><pre><code>&lt;body&gt;\n  &lt;header&gt;\n    &lt;h1&gt;Website Title&lt;/h1&gt;\n    &lt;nav&gt;\n      &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Home&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;About&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#\"&gt;Contact&lt;/a&gt;&lt;/li&gt;\n      &lt;/ul&gt;\n    &lt;/nav&gt;\n  &lt;/header&gt;\n\n  &lt;main&gt;\n    &lt;article&gt;\n      &lt;header&gt;\n        &lt;h2&gt;Blog Post Title&lt;/h2&gt;\n        &lt;p&gt;Published on &lt;time datetime=\"2025-03-22\"&gt;March 22, 2025&lt;/time&gt;&lt;/p&gt;\n      &lt;/header&gt;\n      &lt;p&gt;Content of the blog post...&lt;/p&gt;\n    &lt;/article&gt;\n\n    &lt;aside&gt;\n      &lt;h3&gt;About the Author&lt;/h3&gt;\n      &lt;p&gt;Brief bio.&lt;/p&gt;\n    &lt;/aside&gt;\n  &lt;/main&gt;\n\n  &lt;footer&gt;\n    &lt;p&gt;&copy; 2025 My Website&lt;/p&gt;\n  &lt;/footer&gt;\n&lt;/body&gt;</code></pre><p>Notice how each semantic element clearly indicates its role. This structure is both developer‑friendly and accessible.</p>"
+    },
+    {
+      "heading": "Summary",
+      "content": "<p>Semantic HTML is not just a best practice—it’s essential for modern web development. By choosing the right element for the job, you create a solid foundation that benefits users, search engines, and your own workflow. As you continue building, always ask yourself: “Is there a semantic element that describes this content better than a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>?”</p><p>In the next article, we’ll explore how to style these semantic structures with CSS to create beautiful, responsive layouts.</p>"
+    }
+  ]
+}
+]

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic HTML | WebBasics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo"><a href="../../index.html">WebBasics.</a></div>
+    <ul class="navbarlist">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <header class="blog-header">
+    <div class="header-content">
+      <span class="category-badge">HTML Basics</span>
+      <h1 class="blog-title">Semantic HTML</h1>
+      <p class="blog-subtitle">Writing meaningful markup for better structure, accessibility, and SEO</p>
+      
+      <div class="blog-meta">
+        <div class="author-avatar">WT</div>
+        <div class="author-info">
+          <span class="author-name">WebBasics Team</span>
+          <span class="post-date">Mar 22, 2025 • <span id="reading-time">5 min read</span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="blog-container">
+    <article class="blog-content">
+      <p class="lead-excerpt">Not all HTML elements are equal. Learn how semantic elements give meaning to your content, improve accessibility, and make your code easier to maintain.</p>
+
+      <h2>What is Semantic HTML?</h2>
+      <p>Semantic HTML means using HTML elements that carry meaning about the content they contain, rather than just defining how it looks. For example, <code>&lt;header&gt;</code> clearly indicates a page header, whereas a generic <code>&lt;div&gt;</code> does not convey any purpose.</p>
+      <p>Semantic elements were introduced to give developers a way to structure web pages in a way that is both human‑readable and machine‑readable. They make the document outline clear, improve accessibility for screen readers, and help search engines understand your content better.</p>
+
+      <h2>Why Use Semantic Elements?</h2>
+      <ul>
+        <li><strong>Accessibility</strong> – Assistive technologies like screen readers use semantic elements to navigate and interpret content. Users can jump between sections, landmarks, and headings.</li>
+        <li><strong>SEO</strong> – Search engines give more weight to content inside semantic tags. Proper structure helps search bots understand the hierarchy and importance of your content.</li>
+        <li><strong>Maintainability</strong> – Code becomes self‑documenting. Other developers (or your future self) can easily understand the structure without deciphering countless <code>&lt;div&gt;</code>s.</li>
+        <li><strong>Future‑proofing</strong> – Browsers and devices will continue to improve support for semantic elements, ensuring your site remains compatible.</li>
+      </ul>
+
+      <h2>Common Semantic Elements</h2>
+      <p>Here are the most important semantic elements and their typical uses:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code> – Represents introductory content, often containing navigation links, logos, or headings. Can be used page‑wide or within sections.</li>
+        <li><code>&lt;nav&gt;</code> – Defines a set of navigation links (menus, table of contents).</li>
+        <li><code>&lt;main&gt;</code> – Specifies the primary content of the page. There should be only one <code>&lt;main&gt;</code> per document.</li>
+        <li><code>&lt;article&gt;</code> – Represents a self‑contained composition, like a blog post, news story, or comment.</li>
+        <li><code>&lt;section&gt;</code> – Groups related content, usually with a heading. Use when the content is thematically distinct.</li>
+        <li><code>&lt;aside&gt;</code> – Contains content tangentially related to the main content (sidebars, pull quotes, advertisements).</li>
+        <li><code>&lt;footer&gt;</code> – Holds footer information like copyright, contact details, or related links.</li>
+        <li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> – Wrap images, diagrams, or code snippets with an optional caption.</li>
+        <li><code>&lt;time&gt;</code> – Marks up dates and times in a machine‑readable format.</li>
+      </ul>
+
+      <h2>Semantic vs. Non‑Semantic Example</h2>
+      <p>Compare these two approaches for a blog post layout:</p>
+      <p><strong>Non‑semantic (old way):</strong></p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;div class="header"&gt;
+  &lt;h1&gt;My Blog&lt;/h1&gt;
+  &lt;div class="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="main"&gt;
+  &lt;div class="post"&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;div class="content"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="footer"&gt;...&lt;/div&gt;</code></pre>
+      </div>
+
+      <p><strong>Semantic (modern):</strong></p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;header&gt;
+  &lt;h1&gt;My Blog&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+      </div>
+
+      <h2>How Browsers Handle Semantic Elements</h2>
+      <p>All modern browsers support semantic elements. However, older browsers (like Internet Explorer 8 and below) do not recognize them and may treat them as inline elements. To ensure compatibility, you can use a simple CSS reset:</p>
+      <div class="code-wrapper" data-language="css">
+<pre><code>header, nav, main, article, section, aside, footer {
+  display: block;
+}</code></pre>
+      </div>
+      <p>For even older browsers, you can include the HTML5 Shiv script, but for most projects today, the CSS reset is sufficient.</p>
+
+      <h2>Accessibility and ARIA</h2>
+      <p>Even with semantic HTML, you can enhance accessibility with ARIA (Accessible Rich Internet Applications) attributes. However, the first rule of ARIA is: <strong>“Don’t use ARIA if you can use a native semantic element.”</strong> For example, a <code>&lt;button&gt;</code> is natively accessible; a <code>&lt;div&gt;</code> with <code>role="button"</code> requires extra work.</p>
+      <p>Use semantic elements to avoid needing ARIA for basic structure. Reserve ARIA for complex widgets or when you need to convey dynamic changes.</p>
+
+      <h2>Putting It All Together</h2>
+      <p>Let’s build a simple semantic webpage skeleton:</p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;header&gt;
+        &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+        &lt;p&gt;Published on &lt;time datetime="2025-03-22"&gt;March 22, 2025&lt;/time&gt;&lt;/p&gt;
+      &lt;/header&gt;
+      &lt;p&gt;Content of the blog post...&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;aside&gt;
+      &lt;h3&gt;About the Author&lt;/h3&gt;
+      &lt;p&gt;Brief bio.&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 My Website&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+      </div>
+      <p>Notice how each semantic element clearly indicates its role. This structure is both developer‑friendly and accessible.</p>
+
+      <h2>Summary</h2>
+      <p>Semantic HTML is not just a best practice—it’s essential for modern web development. By choosing the right element for the job, you create a solid foundation that benefits users, search engines, and your own workflow. As you continue building, always ask yourself: “Is there a semantic element that describes this content better than a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>?”</p>
+      <p>In the next article, we’ll explore how to style these semantic structures with CSS to create beautiful, responsive layouts.</p>
+    </article>
+
+    <div class="blog-footer">
+      <div class="article-navigation">
+        <a href="../2/page2.html" class="nav-btn prev-btn">← Previous</a>
+        <a href="../../index.html" class="nav-btn home-btn">Home</a>
+        <a href="../../index.html#articles" class="nav-btn next-btn disabled">Next →</a>
+      </div>
+      <p>Enjoyed this article? Share it with a fellow dev!</p>
+      <div class="share-buttons">
+        <button class="btn btn-secondary">Twitter</button>
+        <button class="btn btn-secondary">LinkedIn</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

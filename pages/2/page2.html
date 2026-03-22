@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Html Fundamentals | WebBasics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo"><a href="../index.html">WebBasics.</a></div>
+    <ul class="navbarlist">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <header class="blog-header">
+    <div class="header-content">
+      <span class="category-badge">HTML Basics</span>
+      <h1 class="blog-title">Html Fundamentals</h1>
+      <p class="blog-subtitle">Understanding the structure, syntax, and essential elements of HTML</p>
+      
+      <div class="blog-meta">
+        <div class="author-avatar">WT</div>
+        <div class="author-info">
+          <span class="author-name">WebBasics Team</span>
+          <span class="post-date">Mar 22, 2025 • <span id="reading-time">4 min read</span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="blog-container">
+    <article class="blog-content">
+      <p class="lead-excerpt">HTML is the foundation of every webpage. Learn about tags, attributes, document structure, and the most commonly used elements to start building your own sites.</p>
+
+      <h2>What is HTML?</h2>
+      <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a webpage using a system of elements represented by tags. Browsers interpret HTML to render content like headings, paragraphs, links, images, and more.</p>
+      <p>HTML is not a programming language; it’s a markup language that gives meaning and structure to content. Every website you visit relies on HTML at its core.</p>
+
+      <h2>HTML Document Structure</h2>
+      <p>An HTML document has a specific skeleton that every browser expects. Here’s the minimal structure:</p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> – Declares the document type and HTML version.</li>
+        <li><code>&lt;html&gt;</code> – The root element that wraps all content.</li>
+        <li><code>&lt;head&gt;</code> – Contains meta information, title, links to CSS, and scripts.</li>
+        <li><code>&lt;body&gt;</code> – Holds the visible content of the webpage.</li>
+      </ul>
+
+      <h2>Tags, Elements, and Attributes</h2>
+      <p><strong>Tags</strong> are the building blocks. Most come in pairs: an opening tag <code>&lt;tagname&gt;</code> and a closing tag <code>&lt;/tagname&gt;</code>. The content between them, plus the tags themselves, form an <strong>element</strong>.</p>
+      <p><strong>Attributes</strong> provide additional information about an element. They appear inside the opening tag:</p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</code></pre>
+      </div>
+      <p>Here <code>href</code> is an attribute that specifies the link destination.</p>
+      <p>Common global attributes include <code>id</code>, <code>class</code>, and <code>style</code>.</p>
+
+      <h2>Essential HTML Elements</h2>
+      <p>Here are some fundamental elements you’ll use constantly:</p>
+      <ul>
+        <li><strong>Headings</strong> – <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for section titles, with <code>&lt;h1&gt;</code> being the most important.</li>
+        <li><strong>Paragraphs</strong> – <code>&lt;p&gt;</code> for blocks of text.</li>
+        <li><strong>Links</strong> – <code>&lt;a&gt;</code> with <code>href</code> to create hyperlinks.</li>
+        <li><strong>Images</strong> – <code>&lt;img&gt;</code> with <code>src</code> and <code>alt</code> attributes.</li>
+        <li><strong>Lists</strong> – <code>&lt;ul&gt;</code> (unordered), <code>&lt;ol&gt;</code> (ordered), and <code>&lt;li&gt;</code> for list items.</li>
+        <li><strong>Divisions and Spans</strong> – <code>&lt;div&gt;</code> (block container) and <code>&lt;span&gt;</code> (inline container) for grouping content.</li>
+      </ul>
+      <p>Example of a simple page using these elements:</p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;h1&gt;My First Page&lt;/h1&gt;
+&lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;a href="about.html"&gt;Learn more about me&lt;/a&gt;
+&lt;img src="photo.jpg" alt="My photo"&gt;
+&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      </div>
+
+      <h2>Nesting and Hierarchy</h2>
+      <p>HTML elements can be nested inside each other to create complex structures. Proper nesting is crucial for both styling and accessibility.</p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;div&gt;
+  &lt;h2&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;We are a team of &lt;strong&gt;web developers&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <p>Always close tags in the reverse order they were opened. This creates a tree‑like structure known as the Document Object Model (DOM).</p>
+
+      <h2>Comments</h2>
+      <p>Comments help you document your code. They are not displayed in the browser:</p>
+      <div class="code-wrapper" data-language="html">
+<pre><code>&lt;!-- This is a comment --&gt;</code></pre>
+      </div>
+      <p>Use comments to explain sections, leave notes, or temporarily disable code.</p>
+
+      <h2>Next Steps</h2>
+      <p>Now that you know the basics of HTML syntax and essential elements, you’re ready to style your content with CSS. But before moving on, practice by building a simple webpage that includes headings, paragraphs, links, images, and lists. Experiment with nesting and attributes.</p>
+      <p>In the next article, we’ll explore <strong>Semantic HTML</strong> – how to choose the right elements to make your content more meaningful and accessible.</p>
+    </article>
+
+    <div class="blog-footer">
+      <div class="article-navigation">
+        <a href="../1/page.html" class="nav-btn prev-btn">← Previous</a>
+        <a href="../../index.html" class="nav-btn home-btn">Home</a>
+        <a href="../3/page3.html" class="nav-btn next-btn">Next →</a>
+      </div>
+      <p>Enjoyed this article? Share it with a fellow dev!</p>
+      <div class="share-buttons">
+        <button class="btn btn-secondary">Twitter</button>
+        <button class="btn btn-secondary">LinkedIn</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Developer",
+    "text": "These articles are amazing! The breakdown of Semantic HTML really clicked for me.",
+    "date": "2025-03-23T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Alex C.",
+    "text": "I really appreciate the clean design. The code snippets with the copy buttons are a life saver!",
+    "date": "2025-03-24T14:15:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Frontend Newbie",
+    "text": "Thank you! Could you cover CSS Grid vs Flexbox in your next post?",
+    "date": "2025-03-25T09:45:00Z"
+  },
+  {
+    "id": 1774181316386,
+    "name": "Sumeet",
+    "text": "Nice website\n",
+    "date": "2026-03-22T12:08:36.386Z"
+  },
+  {
+    "id": 1774181328486,
+    "name": "dwijesh",
+    "text": "Good Good",
+    "date": "2026-03-22T12:08:48.486Z"
+  }
+]
