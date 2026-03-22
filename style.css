@@ -703,6 +703,10 @@ html {
     flex-direction: column;
     text-align: center;
   }
+
+  #review-svg {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
