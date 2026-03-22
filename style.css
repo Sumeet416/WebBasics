@@ -33,6 +33,11 @@ html {
   cursor: pointer;
 }
 
+.logo a{
+  color: inherit;
+  text-decoration: none;
+}
+
 .navbarlist {
   list-style-type: none;
   display: flex;
